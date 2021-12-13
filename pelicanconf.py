@@ -1,5 +1,5 @@
 AUTHOR = 'Aldon P Smith'
-SITENAME = 'Imperial Technology Blog'
+SITENAME = 'Imperial Tech'
 SITEURL = ''
 
 PATH = 'content'
@@ -22,11 +22,31 @@ LINKS = (('Pelican', 'https://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (
+    ('github', 'https://github.com/smithaldon1'),
+    ('twitter', 'https://twitter.com/AldonSmith7'),
+    ('linkedin', 'https://www.linkedin.com/in/aldon-smith/')
+)
 
 DEFAULT_PAGINATION = 10
 
-THEME = "pure"
+THEME = "bootstrap2"
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+SITEMAP = {
+    "format": "xml",
+    "priorities": {
+        "articles": 0.5,
+        "indexes": 0.5,
+        "pages": 0.5
+    },
+    "changefreqs": {
+        "articles": "monthly",
+        "indexes": "daily",
+        "pages": "monthly"
+    }
+}
+
+STATIC_PATHS = ['images',]
